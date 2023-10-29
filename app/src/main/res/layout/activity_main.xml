@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/btn_information"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Information"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="155dp" />
+
+        <Button
+            android:id="@+id/btn_hike"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="View all hike"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <Button
+            android:id="@+id/addHike"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Add new hike"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="269dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Wellcome"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="113dp"
+            tools:layout_editor_absoluteY="41dp" />
+
+        <TextView
+            android:id="@+id/edit_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Fullname"
+            tools:layout_editor_absoluteX="139dp"
+            tools:layout_editor_absoluteY="85dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
