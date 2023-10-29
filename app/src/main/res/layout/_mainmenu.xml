@@ -25,8 +25,8 @@
         android:layout_width="162dp"
         android:layout_height="40dp"
         android:text="Add new hike"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="283dp" />
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="269dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="37dp" />
 
     <TextView
-        android:id="@+id/fullname"
+        android:id="@+id/edit_fullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fullname"

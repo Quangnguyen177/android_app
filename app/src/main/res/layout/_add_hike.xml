@@ -238,7 +238,7 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/btn_editHike"
+        app:layout_constraintBottom_toTopOf="@+id/btn_addHike"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
@@ -246,10 +246,10 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btn_editHike"
+        android:id="@+id/btn_addHike"
         android:layout_width="82dp"
         android:layout_height="46dp"
-        android:text="Edit"
+        android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.532"
