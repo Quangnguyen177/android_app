@@ -2,6 +2,7 @@ package com.example.hikeapp;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -30,6 +32,7 @@ public class AllHikeAcivity extends AppCompatActivity {
     HikeAdapter myadapter;
     EditText searchHike;
     SQLiteDatabase mydatabase;
+    Button btn_detailHike,btn_editHike,btn_deleteHike;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,43 +67,8 @@ public class AllHikeAcivity extends AppCompatActivity {
         Log.i("error",myList.size()+ "");
         myadapter = new HikeAdapter(myList,this);
         recyclerView.setAdapter(myadapter);
-        waitTask wt = new waitTask();
-        wt.execute();
+        recyclerView.setLayoutManager(new LinearLayoutManager(AllHikeAcivity.this));
     }
-    public void updateUIHikes(ArrayList<Hike> hikes){
-        Log.d("inside", "updateUI");
-//        myadapter = new HikeAdapter(hikes,this);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //recyclerView.setAdapter(myadapter);
-    }
-    class waitTask extends AsyncTask<Void,Void,Void>{
-        ProgressDialog pd;
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            pd = new ProgressDialog(AllHikeAcivity.this);
-            pd.show();
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            try {
-                Thread.sleep(5000);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-            return null;
-        }
-        @Override
-        protected void onPostExecute(Void unused) {
-            super.onPostExecute(unused);
-            updateUIHikes(myList);
-            pd.dismiss();
-        }
-    }
-
-
 
     private void eventBack() {
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -115,4 +83,17 @@ public class AllHikeAcivity extends AppCompatActivity {
     private void link() {
         btnBack = findViewById(R.id.btn_back);
     }
+
+//    @Override
+//    public void onClickItem(int position) {
+//        Intent intent = new Intent(AllHikeAcivity.this, Hike.class);
+//        intent.putExtra("hikeName", myList.get(position).getHikeName());
+//        intent.putExtra("location", myList.get(position).getLocation());
+//        intent.putExtra("date", myList.get(position).getDate());
+//        intent.putExtra("description", myList.get(position).getDescription());
+//        intent.putExtra("lengthOfHike", myList.get(position).getLengthOfHike());
+//        intent.putExtra("packingSpinner", myList.get(position).getPacking_spinner());
+//        intent.putExtra("difficulty", myList.get(position).getDifficulty());
+//        startActivity(intent);
+//    }
 }

@@ -1,5 +1,6 @@
 package com.example.hikeapp;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,9 +25,7 @@ public class HikeAdapter extends RecyclerView.Adapter<HikeAdapter.ViewHolder> {
     @Override
     public HikeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-
         View view = inflater.inflate(R.layout.item_hikes, parent, false );
-
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -36,6 +35,25 @@ public class HikeAdapter extends RecyclerView.Adapter<HikeAdapter.ViewHolder> {
         holder.tv_location.setText(mylist.get(position).getLocation());
         holder.tv_hikeName.setText(mylist.get(position).getHikeName());
         holder.tv_difficulty.setText(mylist.get(position).getDifficulty());
+
+        holder.btn_detailHike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailHikeActivity.class);
+                intent.putExtra("idHike", mylist.get(position).getIdHike());
+                intent.putExtra("hikeName", mylist.get(position).getHikeName());
+                intent.putExtra("location", mylist.get(position).getLocation());
+                intent.putExtra("date", mylist.get(position).getDate());
+                intent.putExtra("description", mylist.get(position).getDescription());
+                intent.putExtra("lengthOfHike", mylist.get(position).getLengthOfHike());
+                intent.putExtra("packingSpinner", mylist.get(position).getPacking_spinner());
+                intent.putExtra("difficulty", mylist.get(position).getDifficulty());
+                context.startActivity(intent);
+            }
+
+
+
+        });
 
     }
 
@@ -50,12 +68,12 @@ public class HikeAdapter extends RecyclerView.Adapter<HikeAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-        tv_hikeName = (TextView) itemView.findViewById(R.id.tv_hikeName);
-        tv_location = (TextView) itemView.findViewById(R.id.tv_location);
-        tv_difficulty = (TextView) itemView.findViewById(R.id.tv_difficulty);
-        btn_editHike = itemView.findViewById(R.id.btn_editHike);
-        btn_deleteHike = itemView.findViewById(R.id.btn_deleteHike);
-        btn_detailHike = itemView.findViewById(R.id.btn_detailHike);
+            tv_hikeName = (TextView) itemView.findViewById(R.id.tv_hikeName);
+            tv_location = (TextView) itemView.findViewById(R.id.tv_location);
+            tv_difficulty = (TextView) itemView.findViewById(R.id.tv_difficulty);
+            btn_editHike = itemView.findViewById(R.id.btn_editHike);
+            btn_deleteHike = itemView.findViewById(R.id.btn_deleteHike);
+            btn_detailHike = itemView.findViewById(R.id.btn_detailHike);
         }
 
     }

@@ -1,25 +1,19 @@
 package com.example.hikeapp;
 
-import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class AddHikeActivity extends AppCompatActivity {
@@ -49,13 +43,13 @@ public class AddHikeActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this);
 
         //tham chieu id cho cac bien giao dien
-        hikeName = findViewById(R.id.hikeName);
-        location =findViewById(R.id.location);
-        date = findViewById(R.id.date);
-        description = findViewById(R.id.description);
-        lengthOfHike = findViewById(R.id.lengthOfHike);
-        addHike = findViewById(R.id.addHike);
-        packing_spinner = findViewById(R.id.packing_spinner);
+        hikeName = findViewById(R.id.ed_hikeName);
+        location =findViewById(R.id.ed_location);
+        date = findViewById(R.id.ed_date);
+        description = findViewById(R.id.ed_description);
+        lengthOfHike = findViewById(R.id.ed_lengthOfHike);
+        addHike = findViewById(R.id.ed_saveHike);
+        packing_spinner = findViewById(R.id.ed_packingSpinner);
         difficulty = findViewById(R.id.rg_difficulty);
         packing_spinner.setAdapter(myadapter);
 

@@ -13,7 +13,6 @@ public class Hike {
     public static String COLUMN_DIFFICULTY = "difficulty";
 
 
-
     private String idHike;
     private String hikeName;
     private String location;

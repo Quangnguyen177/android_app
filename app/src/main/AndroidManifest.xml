@@ -13,6 +13,12 @@
         android:theme="@style/Theme.HikeApp"
         tools:targetApi="31">
         <activity
+            android:name=".UpdateHike"
+             />
+        <activity
+            android:name=".DetailHikeActivity"
+            android:exported="false" />
+        <activity
             android:name=".Information"
             android:exported="false" />
         <activity
