@@ -15,14 +15,6 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <Button
-            android:id="@+id/btn_information"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="Information"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="155dp" />
-
-        <Button
             android:id="@+id/btn_hike"
             android:layout_width="match_parent"
             android:layout_height="60dp"

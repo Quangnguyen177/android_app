@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    android:id="@+id/item_hikes"
+    android:id="@+id/item_observations"
     android:layout_weight="1"
     android:background="@drawable/bg_item"
     android:orientation="horizontal"
@@ -23,24 +23,24 @@
         android:layout_marginStart="10dp"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/tv_hikeName"
+            android:id="@+id/tv_obName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hike 1"
+            android:text="Name"
             android:textColor="@color/black"
             android:textSize="16sp"></TextView>
         <TextView
-            android:id="@+id/tv_location"
+            android:id="@+id/tv_obTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hanoi"
+            android:text="Time"
             android:textColor="@color/black"
             android:textSize="16sp"></TextView>
         <TextView
-            android:id="@+id/tv_difficulty"
+            android:id="@+id/tv_obComment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hard"
+            android:text="AdditionComment"
             android:textColor="@color/black"
             android:textSize="16sp"></TextView>
 
@@ -52,12 +52,12 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_detailHike"
+            android:id="@+id/btn_detailOb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detail"></Button>
         <Button
-            android:id="@+id/btn_deleteHike"
+            android:id="@+id/btn_deleteOb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete"></Button>

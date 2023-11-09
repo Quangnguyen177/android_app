@@ -2,8 +2,8 @@ package com.example.hikeapp;
 
 public class Hike {
 
-    public static String TABLE_NAME= "hike";
-    public static String COLUMN_ID = "hikeid";
+    public static String TABLE_NAME= "tblHike";
+    public static String COLUMN_ID = "idHike";
     public static String COLUMN_NAME = "hikeName";
     public static String COLUMN_LOCATION = "location";
     public static String COLUMN_DATE = "date";
@@ -11,7 +11,6 @@ public class Hike {
     public static String COLUMN_LENGTHOFHIKE = "lengthOfHike";
     public static String COLUMN_PACKINGAVAILABLE ="packingSpinner";
     public static String COLUMN_DIFFICULTY = "difficulty";
-
 
 
     private String idHike;

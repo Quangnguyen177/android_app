@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_info,btn_hike,btn_add;
+    Button btn_hike,btn_add;
+    HikeAdapter hikeAdapter;
+    DBHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,18 +37,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-        intent2 = new Intent(this, Information.class);
-        btn_info.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(intent2);
-            }
-        });
+
     }
+
 
     private void link() {
         btn_add = findViewById(R.id.btn_addHike);
         btn_hike= findViewById(R.id.btn_hike);
-        btn_info = findViewById(R.id.btn_information);
     }
 }

@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +19,22 @@
         android:theme="@style/Theme.HikeApp"
         tools:targetApi="31">
         <activity
-            android:name=".Information"
+            android:name=".EditObservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailObservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AllObservationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ObservationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateHikeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailHikeActivity"
             android:exported="false" />
         <activity
             android:name=".AddHikeActivity"

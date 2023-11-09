@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".UpdateHikeActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,7 +14,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
 
             <ImageView
@@ -30,12 +29,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"></ImageView>
 
-
             <TextView
                 android:id="@+id/txt_addHike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Hike"
+                android:text="Edit Hike"
                 android:textSize="26dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,13 +45,13 @@
                 android:id="@+id/txt_hikeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="116dp"
+                android:layout_marginTop="21dp"
                 android:text="Name of the hike"
                 android:textColor="#2196F3"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_addHike" />
 
@@ -61,11 +59,11 @@
                 android:id="@+id/dt_observationName"
                 android:layout_width="230dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="8dp"
                 android:hint="Enter Hike name"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_hikeName" />
 
@@ -205,7 +203,7 @@
 
 
             <RadioGroup
-                android:id="@+id/rg_difficulty"
+                android:id="@+id/ed_difficulty"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="12dp"
@@ -286,7 +284,7 @@
                 android:id="@+id/btn_addHike"
                 android:layout_width="82dp"
                 android:layout_height="46dp"
-                android:text="Add"
+                android:text="Save"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.532"
